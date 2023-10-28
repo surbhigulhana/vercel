@@ -9,7 +9,7 @@ function Stock() {
 
   useEffect(() => {
     // Fetch stock data from your Express backend
-    axios.get('http://localhost:4005/stock').then((response) => {
+    axios.get('https://vercel-bxtw.vercel.app/stock').then((response) => {
       setStocks(response.data);
     });
   }, []);
