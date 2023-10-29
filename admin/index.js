@@ -7,13 +7,7 @@ require("./Model/config");
 
 
 
-app.use(cors(
-  {
-    origin :["https://deploy-mern.app"],
-    methods:["POST"."GET"],
-             credentials:true
-  }
-));
+app.use(cors());
 app.use(express.json());
 app.get("/"(req,res)=>{
   res.json("hello")
