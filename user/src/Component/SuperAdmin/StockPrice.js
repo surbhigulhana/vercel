@@ -20,13 +20,12 @@ function StockPrice() {
   };
 
   useEffect(() => {
-    // Fetch the stock price when the component mounts
+    // Fetch the stock price 
     fetchStockPrice();
 
-    // Set up an interval to fetch the stock price every 1 minute (adjust as needed)
-    const intervalId = setInterval(fetchStockPrice, 1000); // 1 minute = 60,000 milliseconds
+    const intervalId = setInterval(fetchStockPrice, 60000); // 1 minute = 60,000 milliseconds
 
-    // Clear the interval when the component unmounts
+    // Clear the interval
     return () => {
       clearInterval(intervalId);
     };
