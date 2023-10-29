@@ -10,7 +10,7 @@ function StockPrice() {
   const fetchStockPrice = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get(`http://localhost:4005/api/stocks/${id}`);
+      const response = await axios.get(`https://vercel-beige-five.vercel.app/api/stocks/${id}`);
       setStock(response.data);
     } catch (error) {
       console.error('Error fetching stock data:', error);
