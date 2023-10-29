@@ -9,5 +9,5 @@ const schema3 = new  mongoose.Schema({
     }
 
 });
-const StockPrice = new mongoose.model('StockPrice',schema3);
-module.exports = StockPrice;
+const StockPriceOne = new mongoose.model('StockPriceOne',schema3);
+module.exports = StockPriceOne;
