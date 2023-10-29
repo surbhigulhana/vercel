@@ -10,7 +10,7 @@ function StockPrice() {
   const fetchStockPrice = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get(`https://vercel-bxtw.vercel.app/api/stocks/${id}`);
+      const response = await axios.get(`http://localhost:4005/api/stocks/${id}`);
       setStock(response.data);
     } catch (error) {
       console.error('Error fetching stock data:', error);
@@ -34,12 +34,36 @@ function StockPrice() {
 
   return (
     <div>
-      <h2>Stock Details</h2>
-      <div>
-        <p><strong>Stock Name:</strong> {stock.StockName}</p>
+        <div class="container">
+  
+
+  <section class="main">
+   
+ 
+
+    <section class="attendance">
+      <div class="attendance-list">
+        <h1>List</h1>
+        <table class="table">
+          <thead>
+            <tr>
+            
+              <th>Stock Details</th>
+             
+            
+          
+            </tr>
+          </thead>
+          <tbody>
+          <p><strong>Stock Name:</strong> {stock.StockName}</p>
         <p><strong>Stock Price:</strong> {stock.StockPrice}</p>
-        {/* Add more details as needed */}
+          </tbody>
+        </table>
       </div>
+    </section>
+  </section>
+</div>
+      
     </div>
   );
 }
