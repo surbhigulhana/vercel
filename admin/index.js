@@ -9,8 +9,7 @@ require("./Model/config");
 
 app.use(cors());
 app.use(express.json());
-app.get("/",function(req,res)=>{
-  res.json("hello")
+
 app.post("/api/Stock", async function (req, res) {
   const { StockName,StockPrice } = req.body;
   
