@@ -48,7 +48,7 @@ function Stock() {
               </td>
               <td>{stock.StockPrice}</td>
               <td>
-               <button class="btn btn-success"> <Link to={`/stock/${stock._id}`}>View</Link></button>
+              type="button" class="btn btn-success" <Link to={`/stock/${stock._id}`}>View</Link></button>
               </td>
              
             </tr>
